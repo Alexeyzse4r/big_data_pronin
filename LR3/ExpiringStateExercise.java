@@ -18,18 +18,6 @@ import org.apache.flink.streaming.api.functions.co.KeyedCoProcessFunction;
 import org.apache.flink.util.Collector;
 import org.apache.flink.util.OutputTag;
 
-/**
- * The "Expiring State" exercise from the Flink training
- * (http://training.ververica.com).
- *
- * The goal for this exercise is to enrich TaxiRides with fare information.
- *
- * Parameters:
- * -rides path-to-input-file
- * -fares path-to-input-file
- *
- */
-
 public class ExpiringStateExercise extends ExerciseBase {
 	static final OutputTag<TaxiRide> unmatchedRides = new OutputTag<TaxiRide>("unmatchedRides") {};
 	static final OutputTag<TaxiFare> unmatchedFares = new OutputTag<TaxiFare>("unmatchedFares") {};
